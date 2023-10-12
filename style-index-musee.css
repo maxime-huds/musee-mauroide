@@ -131,6 +131,7 @@ html .form__input {
   border-radius: 2px;
   margin: 0.625rem auto;
   transition: all 250ms;
+  font-family: monospace;
   /* When the input field (.form__input) is in focus, 
      transform the .form__label and change colors*/
   /* ALSO, if the input field's placeholder is NOT shown (when the input field has content),

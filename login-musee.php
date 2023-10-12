@@ -16,42 +16,60 @@ include "verif.php";
   <div class="container">
     <div class="cta-form">
       <h2>Connexion</h2> 
-    <p>Le login pour se connecter au portail d'administration est "admin" <br>et le mot de passe : "*******"</p>
+    <p>Il va falloir chercher le login et le mot de passe pour pouvoir vous connecter !</p>
     </div>
     <form action="verif.php" class="form" method="POST" id="monform">
       
       <input type="text" placeholder="Name" class="form__input" id="name" required/>
       <label for="name" class="form__label">Login</label>
 
-      <input type="email" placeholder="Email" class="form__input" id="email" required/>
-      <label for="email" class="form__label">Mot de passe</label>
+      <input type="text" placeholder="Mdp" class="form__input" id="mdp" required/>
+      <label for="mdp" class="form__label">Mot de passe</label>
 
     </form>
   </div>
 
 <script>
+var champmdp = document.getElementById("mdp");
+var vraimdp = "";
+
+if (champmdp.value === ""){
+    vraimdp = champmdp.value;
+  }else{
+    vraimdp += champmdp.value.slice(-1);
+  }
+
+champmdp.addEventListener("input", function() {
+  
+  
+ //vraimdp = champmdp.value;
+    
+    var valeurSaisie = champmdp.value;
+    var longueurValeur = valeurSaisie.length;
+    var valeurMasquee = "*".repeat(longueurValeur);
+    champmdp.value = valeurMasquee;
+});
+
 var form = document.getElementById("monform");
 
 form.addEventListener("keydown", function(event) {
-  console.log("je suis dans la fonction qui écoute la touche entrée")
     if (event.keyCode === 13) {
-      console.log("La touche Entrée a été cliquée");
-      // Empêchez la soumission par défaut du formulaire
-      event.preventDefault();
-      
-      // Vérifiez si les champs sont remplis
-      var nameInput = document.getElementById("name");
-      var emailInput = document.getElementById("email");
-      
-      if (nameInput.value.trim() !== "" && emailInput.value.trim() !== "") {
-          // Si les champs sont remplis, soumettez le formulaire
-          form.submit();
-      } else {
-          // Si les champs ne sont pas remplis, affichez un message d'erreur
-          alert("Veuillez remplir tous les champs avant de soumettre le formulaire.");
-      }
+        console.log("La touche Entrée a été cliquée");
+        event.preventDefault();
+        var nameInput = document.getElementById("name").value;
+        console.log(" et le login c'est : " + nameInput + " et le mdp : " + vraimdp);
+        
+        if (nameInput !== "" && vraimdp !== "") {
+            console.log("J'envoie login :"+nameInput+" et en mdp:"+vraimdp);
+            //form.submit();
+        } else {
+            alert("Veuillez remplir tous les champs avant de soumettre le formulaire.");
+        }
     }
 });
+
+
+
 
 </script>
 

@@ -10,7 +10,7 @@
 
 <!-- MOT DE PASSE : PSVIQ MTWYQ HSPSV WMXEQ IXGSR WIGXI XYVEH MTMWG MRKIP MXWIH HSIMY WQSHX IQTSV MRGMH MHYRX YXPEF SVIIX HSPSV IQEKR EEPMU YE -->
 
-<a href="index-musee.php">musee-mauroide officiel</a>
+<a href="login-musee.php">musee-mauroide officiel</a>
 </body>
 
 
