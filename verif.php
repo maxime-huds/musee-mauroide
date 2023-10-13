@@ -18,7 +18,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $nbr_lignes=count($acc);
         if ($nbr_lignes==1){
-            header('Location: index-musee.php');
+            if ($login === "admin"){
+                header('Location: main-directeur.php');
+            } else if ($login === "alendroit"){
+                header('Location: main-verse.php');
+            }else {
+                header('Location: main-secu.php');
+            }
             exit();
         }
         else{
