@@ -1,15 +1,13 @@
 <?php
 include "connexion.php";
 
-echo "Voici le login que je reçoit : ".$_POST["name"];
-echo "<br> et voici le mdp : ".$_POST['mdp'];
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // récupérer les valeurs du formulaire
-    $login = htmlentities ($_POST['name']);
-    $_SESSION['username'] = htmlentities($_POST['name']);
-    $mdp = htmlentities ($_POST['mdp']);
-    $_SESSION['mdp'] = $mdp;
+    $login = htmlentities ($_POST['username']);
+    $_SESSION['username'] = htmlentities($_POST['username']);
+    $mdp = htmlentities ($_POST['password']);
+    $_SESSION['password'] = $mdp;
 
 
     if (isset($login) && isset($mdp)){
@@ -28,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo 'alert("Mauvais mot de passe !");';
             echo '});';
             echo '</script>';
-            //header('Location: login-musee.php');
+            header('Location: login-musee.php');
         }
 }
 

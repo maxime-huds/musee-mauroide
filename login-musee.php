@@ -1,93 +1,60 @@
 <?php
 $a = session_id(); if(empty($a)) session_start();
-include "verif.php";
 ?>
+
+
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Musee Mauroide</title>
-  <link rel="stylesheet" href="style-index-musee.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
-<body>
-
-<h1>Formulaire de connexion</h1>
-  <div class="container">
-    <div class="cta-form">
-      <h2>Connexion</h2> 
-    <p>Il va falloir chercher le login et le mot de passe pour pouvoir vous connecter !</p>
-    </div>
-    <form class="form" id="monform">
-      
-      <input type="text" placeholder="Name" class="form__input" id="name" required/>
-      <label for="name" class="form__label">Login</label>
-
-      <input type="password" placeholder="Mdp" class="form__input" id="mdp" required/>
-      <label for="mdp" class="form__label">Mot de passe</label>
-
-    </form>
-  </div>
+<html>
+    <head>
+        <title>Musée Mauroide</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="login-musee.css">
+        <link rel="icon" href="logo.png">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+      <div class="main">
+        <div class="texte">
+          <span>Se Connecter</span>
+        </div>
+        <div class="formulaire">
+            <form method="post" action="verif.php">
+                <input type="text" placeholder="Nom d'utilisateur" id="username" name="username" required>  
+                <input type="password" placeholder="Mot de passe" id="password" name="password" required>
+                <input type="submit" value="Sign In">
+            </form>
+        </div>
+        <span onclick="envoiemdp()">Mot de passe oublié ? <a href="#">Changer ici</span>
+      </div>
 
 <script>
 
-var champmdp = document.getElementById("mdp");
-var login = document.getElementById("name");
-/*
-var i = 0;
-
-
-champmdp.addEventListener("input", function() {
-  if (i === 0){
-    vraimdp = champmdp.value;
-    i += 1;
-    }else{
-      vraimdp += champmdp.value.slice(-1);
-    }
-  
- //vraimdp = champmdp.value;
-    
-    var valeurSaisie = champmdp.value;
-    var longueurValeur = valeurSaisie.length;
-    var valeurMasquee = "*".repeat(longueurValeur);
-    champmdp.value = valeurMasquee;
-});
-*/
-
-
-
-var form = document.getElementById("monform");
-
-form.addEventListener("keydown", function(event) {
-    if (event.keyCode === 13) {
-      $.ajax({
-        url: "verif.php",
-        type: "POST",
-        data: {mdp:champmdp.value, login:login.value},
-        success: function(){
-          console.log("")
-        }
-      })
-        console.log("La touche Entrée a été cliquée");
-        event.preventDefault();
-        var nameInput = document.getElementById("name").value;
-        console.log(" et le login c'est : " + nameInput + " et le mdp : ");
-        
-        if (nameInput !== "" && champmdp.value !== "") {
-            console.log("J'envoie login :"+nameInput+" et en mdp:");
-            form.submit();
-        } else {
-            alert("Veuillez remplir tous les champs avant de soumettre le formulaire.");
-        }
-    }
-});
-
-
+function envoiemdp(){
+  var login = document.getElementById("username").value;
+  console.log("je suis dans ma fonction et mon login vaut :"+login)
+  if (login === ""){
+    console.log("je suis dans la fonction et y'a pas de login")
+    alert("Attention, veuillez choisir un utilisateur");
+  }else{
+    console.log("je fais la requete ajax la")
+    $.ajax({
+    url: "change_mdp.php",
+    type: "POST",
+    data: {login : login},
+    success: function(){
+      console.log("requete envoyée, login = "+login)
+      window.location.href = "change_mdp.php";
+      }, error: function(error){
+        console.log("erreur lors de la requete : "+error)
+      }
+    });
+  }
+}
 
 
 </script>
 
-
-</body>
-
+  
+    </body>
 </html>
+
