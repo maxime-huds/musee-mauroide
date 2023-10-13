@@ -1,4 +1,7 @@
-
+<?php
+$a = session_id(); if(empty($a)) session_start();
+include "verif.php";
+?>
 
 <!DOCTYPE html>
 <html lang="fr">

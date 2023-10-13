@@ -10,35 +10,35 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $_SESSION['password'] = $mdp;
 
 
-    if (isset($login) && isset($mdp)){
-        $sql=("SELECT * FROM user WHERE `login`='$login' AND `mdp`='$mdp'");
-        $account= $pdo->prepare($sql);
+    if (isset($login) && isset($mdp)) {
+        $sql = "SELECT * FROM user WHERE `login` = :login";
+        $account = $pdo->prepare($sql);
+        $account->bindParam(':login', $login, PDO::PARAM_STR);
         $account->execute();
-        $acc=$account->fetchAll();
-
-        $nbr_lignes=count($acc);
-        if ($nbr_lignes==1){
-            if ($login === "admin"){
+        $acc = $account->fetch(); // Utilisation de fetch() car nous nous attendons à un seul résultat
+    
+        if ($acc && password_verify($mdp, $acc['mdp'])) { // Utilisez password_verify pour vérifier le mot de passe
+            if ($login === "admin") {
                 header('Location: main-directeur.php');
-            } else if ($login === "alendroit"){
+                exit();
+            } else if ($login === "alendroit") {
                 header('Location: main-verse.php');
-            }else {
+                exit();
+            } else {
                 header('Location: main-secu.php');
+                exit();
             }
-            exit();
-        }
-        else{
+        } else {
             echo '<script>';
             echo 'alert("Mauvais mot de passe !");';
-            echo '});';
             echo '</script>';
             header('Location: login-musee.php');
+            exit();
         }
-}
-
+    }
 }
 else{
-    
+    header('Location: login-musee.php');
 }
 
 
