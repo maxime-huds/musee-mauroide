@@ -24,37 +24,27 @@ $a = session_id(); if(empty($a)) session_start();
                 <input type="submit" value="Sign In">
             </form>
         </div>
-        <span onclick="envoiemdp()">Mot de passe oublié ? <a href="#">Changer ici</span>
+        <span id="text" style="display:none;">Mot de passe oublié ? <a href="change_mdp.php">Changer ici</span>
       </div>
 
 <script>
+  var login = document.getElementById("username");
+  var span = document.getElementById("text");
 
-function envoiemdp(){
-  var login = document.getElementById("username").value;
-  console.log("je suis dans ma fonction et mon login vaut :"+login)
-  if (login === ""){
-    console.log("je suis dans la fonction et y'a pas de login")
-    alert("Attention, veuillez choisir un utilisateur");
-  }else{
-    console.log("je fais la requete ajax la")
-    $.ajax({
-    url: "change_mdp.php",
-    type: "POST",
-    data: {login : login},
-    success: function(){
-      console.log("requete envoyée, login = "+login)
-      window.location.href = "change_mdp.php";
-      }, error: function(error){
-        console.log("erreur lors de la requete : "+error)
-      }
-    });
-  }
-}
+  login.addEventListener("input", function(){
+    if (login.value === "alendroit"){
+      span.style.display = "block";
+    }else{
+      span.style.display = "none";
+    }
+  });
 
 
 </script>
 
-  
+
+
+
     </body>
 </html>
 
