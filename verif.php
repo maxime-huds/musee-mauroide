@@ -1,6 +1,9 @@
 <?php
 include "connexion.php";
 
+echo "Voici le login que je reçoit : ".$_POST["name"];
+echo "<br> et voici le mdp : ".$_POST['mdp'];
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // récupérer les valeurs du formulaire
     $login = htmlentities ($_POST['name']);
@@ -10,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     if (isset($login) && isset($mdp)){
-        $sql=("SELECT * FROM users WHERE `username`='$login' AND `hash`='$mdp'");
+        $sql=("SELECT * FROM user WHERE `login`='$login' AND `mdp`='$mdp'");
         $account= $pdo->prepare($sql);
         $account->execute();
         $acc=$account->fetchAll();
