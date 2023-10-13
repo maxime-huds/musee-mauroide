@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="photo_fred.jpg" class="card-img-top" alt="Photo de Frédéric Tus">
+                    <img src="./images/frederic_tus.png" class="card-img-top" alt="Photo de Frédéric Tus">
                     <div class="card-body">
                         <h5 class="card-title">Frédéric Tus</h5>
                         <p class="card-text">Directeur du musée</p>

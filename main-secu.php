@@ -16,7 +16,7 @@ include "verif.php";
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="photo_alain.jpg" class="card-img-top" alt="Photo d'Alain Verse">
+                    <img src="./images/Vincent_Tim.png" class="card-img-top" alt="Photo d'Alain Verse">
                     <div class="card-body">
                         <h5 class="card-title">Vincent Tim</h5>
                         <p class="card-text">Responsable de la Sécurité</p>
