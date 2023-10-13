@@ -99,7 +99,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Murder at "Musée mauroide"</h5>
                         <p class="card-text">Investigation underway at the "mauroide Museum” following a shocking murder. Police are working to solve this mystery. Stay informed for updates on this disturbing case.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+                        <a href="museum.html" class="btn btn-primary">Read More</a>
                     </div>
                 </div>
             </div>
