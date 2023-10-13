@@ -34,6 +34,7 @@
     </header>
     <!-- header -->
 
+    <!--  -->
 
     <!-- Bootstrap Carousel (Slider) with Automatic Slide -->
     <div id="newsCarousel" class="carousel slide" data-ride="carousel" style="max-width: 600px; margin: 0 auto;">
