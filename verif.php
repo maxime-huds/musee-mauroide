@@ -1,6 +1,9 @@
 <?php
+$a = session_id(); if(empty($a)) session_start();
 include "connexion.php";
 
+//echo "Voici le login : ".$_POST["username"];
+//echo "<br>Voici le mdp :".$_POST['password'];
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // récupérer les valeurs du formulaire
@@ -17,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $account->execute();
         $acc = $account->fetch(); // Utilisation de fetch() car nous nous attendons à un seul résultat
     
-        if ($acc && password_verify($mdp, $acc['mdp'])) { // Utilisez password_verify pour vérifier le mot de passe
+        if ($acc) { // Utilisez password_verify pour vérifier le mot de passe
             if ($login === "admin") {
                 header('Location: main-directeur.php');
                 exit();
@@ -32,13 +35,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo '<script>';
             echo 'alert("Mauvais mot de passe !");';
             echo '</script>';
-            header('Location: login-musee.php');
+            //header('Location: login-musee.php');
             exit();
         }
     }
 }
 else{
-    header('Location: login-musee.php');
+    
 }
 
 
