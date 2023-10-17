@@ -4,11 +4,11 @@ include "verif.php";
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil d'Alain Verse</title>
+    <title>Alain Verse's Profile</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -16,10 +16,10 @@ include "verif.php";
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="./images/Vincent_Tim.png" class="card-img-top" alt="Photo d'Alain Verse">
+                    <img src="./images/Vincent_Tim.png" class="card-img-top" alt="Alain Verse's Photo">
                     <div class="card-body">
                         <h5 class="card-title">Vincent Tim</h5>
-                        <p class="card-text">Responsable de la Sécurité</p>
+                        <p class="card-text">Security Manager</p>
                     </div>
                 </div>
 
@@ -28,9 +28,12 @@ include "verif.php";
                         <div class="card-body">
                             <h5 class="card-title">Badges</h5>
                             <ul class="list-group">
-                                <li class="list-group-item">Badge 1 - Date/heure</li>
-                                <li class="list-group-item">Badge 2 - Date/heure</li>
-                                <!-- Ajoutez ici d'autres badges au besoin -->
+                                <li class="list-group-item">Badge 1 - 9h</li>
+                                <li class="list-group-item">Badge 2 - 12h</li>
+                                <li class="list-group-item">Badge 3 - 13h</li>
+                                <li class="list-group-item">Badge 4 - 19h</li>
+
+                                <!-- Add other badges here as needed -->
                             </ul>
                         </div>
                     </div>
@@ -39,21 +42,24 @@ include "verif.php";
 
             <div class="col-md-8">
                 <div class="card">
-                    <img src="plan_musee.jpg" class="card-img-top" alt="Plan du musée">
+                    <img src="plan_musee_camera.png" class="card-img-top" alt="Museum Floor Plan">
                     <div class="card-body">
-                        <h5 class="card-title">Plan des caméras</h5>
-                        <p class="card-text">Cliquez sur l'image pour agrandir.</p>
+                        <h5 class="card-title">Camera Layout</h5>
                     </div>
                 </div>
 
                 <div class="mt-4">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Documents de Recherche</h5>
-                            <p class="card-text">Cliquez sur les liens pour télécharger les documents.</p>
-                            <a href="document1.pdf" class="btn btn-primary">Télécharger Document 1</a>
-                            <a href="document2.pdf" class="btn btn-primary">Télécharger Document 2</a>
-                            <!-- Ajoutez ici d'autres liens vers des documents au besoin -->
+                        <div a class="card-body">
+                            <h5 class="card-title">Camera Photos</h5>
+                            <p class="card-text">Click on the links to download the documents.</p>
+                            <a href="./images/caméra1.jpg" class="btn btn-primary">Download Document 1</a>
+                            <a href="./images/caméra2.jpg" class="btn btn-primary">Download Document 2</a>
+                            <a href="./images/caméra3.jpg" class="btn btn-primary">Download Document 3</a>
+                            <a href="./images/caméra4.jpg" class="btn btn-primary">Download Document 4</a>
+                            <a href="./images/caméra5.jpg" class="btn btn-primary">Download Document 5</a>
+                            <a href="./images/caméra6.jpg" class="btn btn-primary">Download Document 6</a>
+                            <!-- Add other links to documents here as needed -->
                         </div>
                     </div>
                 </div>
