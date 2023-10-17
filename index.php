@@ -111,7 +111,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Césars Ceremony</h5>
                         <p class="card-text">Immerse yourself in the world of French cinema at the Césars Ceremony! Discover the winners, the stars, and the notable moments. Follow the evening live on 12/23/2023 on TV4. A celebration of French cinematographic talent!</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+                        <a href="ceremony.html" class="btn btn-primary">Read More</a>
                     </div>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Political Developments</h5>
                         <p class="card-text">Government announces new policies aimed at economic growth.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+                        <a href="political.html" class="btn btn-primary">Read More</a>
                     </div>
                 </div>
             </div>
@@ -151,9 +151,9 @@
                 <div class="card">
                     <img src="images/news6.jpg" class="card-img-top" alt="News 6">
                     <div class="card-body">
-                        <h5 class="card-title">Business Expansion</h5>
+                        <h5 class="card-title">SuperMan</h5>
                         <p class="card-text">Major corporation plans to expand operations globally.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+                        <a href="manpage.html" class="btn btn-primary">Read More</a>
                     </div>
                 </div>
             </div>

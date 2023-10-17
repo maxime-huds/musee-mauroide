@@ -21,6 +21,29 @@ $a = session_id(); if(empty($a)) session_start();
                         <p class="card-text">Museum Director</p>
                     </div>
                 </div>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <div class="chat-container">
+                                <div class="message">
+                                    <p><strong>Alain Verse :</strong> I'm going to be late Nibag is not well...</p>
+                                </div>
+                                <div class="message">
+                                    <p><strong>Frédéric Tus :</strong> No problem, keep me posted</p>
+                                </div>
+                                <div class="message">
+                                    <p><strong>Frédéric Tus :</strong> Why did you sign in so late?</p>
+                                </div>
+                                <!-- Ajoutez plus de messages ici -->
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Écrivez un message...">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button">Envoyer</button>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-8">
@@ -43,6 +66,7 @@ $a = session_id(); if(empty($a)) session_start();
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>

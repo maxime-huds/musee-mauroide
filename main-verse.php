@@ -46,6 +46,7 @@ include "verif.php";
                         <h5 class="card-title">Museum Plan</h5>
                     </div>
                 </div>
+                
 
                 <div class="mt-4">
                     <div class="card">
