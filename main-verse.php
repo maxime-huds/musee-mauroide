@@ -4,11 +4,11 @@ include "verif.php";
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil d'Alain Verse</title>
+    <title>Alain Verse's Profile</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -16,10 +16,10 @@ include "verif.php";
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="photo_alain.jpg" class="card-img-top" alt="Photo d'Alain Verse">
+                    <img src="./images/Alain_Verse.png" class="card-img-top" alt="Alain Verse's Photo">
                     <div class="card-body">
                         <h5 class="card-title">Alain Verse</h5>
-                        <p class="card-text">Chercheur au musée</p>
+                        <p class="card-text">Museum Researcher</p>
                     </div>
                 </div>
 
@@ -28,9 +28,11 @@ include "verif.php";
                         <div class="card-body">
                             <h5 class="card-title">Badges</h5>
                             <ul class="list-group">
-                                <li class="list-group-item">Badge 1 - Date/heure</li>
-                                <li class="list-group-item">Badge 2 - Date/heure</li>
-                                <!-- Ajoutez ici d'autres badges au besoin -->
+                            <li class="list-group-item">Badge 1 - 9:15h</li>
+                                <li class="list-group-item">Badge 2 - 12:37h</li>
+                                <li class="list-group-item">Badge 3 - 12:57h</li>
+                                <li class="list-group-item">Badge 4 - 20:53h</li>
+                                <li class="list-group-item">Badge 5 - 00:53h</li>
                             </ul>
                         </div>
                     </div>
@@ -39,21 +41,20 @@ include "verif.php";
 
             <div class="col-md-8">
                 <div class="card">
-                    <img src="plan_musee.jpg" class="card-img-top" alt="Plan du musée">
+                    <img src="plan_musee.png" class="card-img-top" alt="Museum Plan">
                     <div class="card-body">
-                        <h5 class="card-title">Plan du Musée</h5>
-                        <p class="card-text">Cliquez sur l'image pour agrandir.</p>
+                        <h5 class="card-title">Museum Plan</h5>
                     </div>
                 </div>
 
                 <div class="mt-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Documents de Recherche</h5>
-                            <p class="card-text">Cliquez sur les liens pour télécharger les documents.</p>
-                            <a href="document1.pdf" class="btn btn-primary">Télécharger Document 1</a>
-                            <a href="document2.pdf" class="btn btn-primary">Télécharger Document 2</a>
-                            <!-- Ajoutez ici d'autres liens vers des documents au besoin -->
+                            <h5 class="card-title">Research Documents</h5>
+                            <p class="card-text">Click on the links to download the documents.</p>
+                            <a href="document1.pdf" class="btn btn-primary">Confidential research 1</a>
+                            <a href="document2.pdf" class="btn btn-primary">Confidential research 2</a>
+                            <!-- Add other document links here if needed -->
                         </div>
                     </div>
                 </div>
