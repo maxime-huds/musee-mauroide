@@ -59,9 +59,14 @@ $a = session_id(); if(empty($a)) session_start();
                         <div class="card-body">
                             <h5 class="card-title">List of Employees</h5>
                             <ul class="list-group">
-                                <li class="list-group-item">Alain Verse - Museum Researcher</li>
-                                <li class="list-group-item">Vincent Tim - Security Manager</li>
-                                <li class="list-group-item"></li>
+                                <li class="list-group-item">Vincent Tim - Security Manager - 3euro</li>
+                                <li class="list-group-item">Christophe Talmot - Cleaning - Mi0p3</li>
+                                <li class="list-group-item">Agnès Pagne - Cleaning - C0UCH3</li>
+                                <li class="list-group-item">Brigitte Thamps - Guide - C4R4v4N3</li>
+                                <li class="list-group-item">Jean-Marc Eupaje - Accountant - D0CK3R_I_M4rch3_p4s</li>
+                                <li class="list-group-item">Nicolas Teral - Curator - kw4k0ub3</li>
+                                <li class="list-group-item">Alain Verse - Museum Researcher - alendroit</li>  
+                                <li class="list-group-item">Frédéric Tus - Director - admin</li>                            
                             </ul>
                         </div>
                     </div>
